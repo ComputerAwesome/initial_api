@@ -1,5 +1,5 @@
 import express from 'express'
-import { logger } from './middleware/logger'
+import { logger, serverListener } from './middleware/logger'
 import services from './routers'
 import { catchHttpErrors, catchNotFoundError } from './middleware/errors'
 export default function (app: any): void {
@@ -9,9 +9,12 @@ export default function (app: any): void {
   // use logger
   app.use(logger)
   // use services
-  app.use(services)
+  // app.use(services)
   // catch 404 errors
   app.use(catchNotFoundError)
   // catch http errors
   app.use(catchHttpErrors)
+
+  // listen to port
+  app.listen(5454, serverListener(5454))
 }

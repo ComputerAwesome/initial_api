@@ -9,6 +9,3 @@ app.use(cors())
 
 // run express restful api && express microServices
 expressServer(app)
-
-// listen to port
-app.listen(5454)
