@@ -9,7 +9,7 @@ export default function (app: any): void {
   // use logger
   app.use(logger)
   // use services
-  // app.use(services)
+  app.use(services)
   // catch 404 errors
   app.use(catchNotFoundError)
   // catch http errors

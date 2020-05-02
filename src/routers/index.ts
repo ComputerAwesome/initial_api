@@ -1,3 +1,7 @@
-const routers: object = {}
+import { Router } from 'express'
+
+const routers = Router()
+
+routers.get('/', () => {})
 
 export default routers
