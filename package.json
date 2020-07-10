@@ -8,7 +8,7 @@
     "ts-watch": "tsc -w",
     "dev": "npm run clean && nodemon ./src/index.ts",
     "clean": "rm -rf build",
-    "build": "npm run clean && tsc --AllowJs --checkJs",
+    "build": "npm run eslint && npm run clean && tsc --AllowJs --checkJs ",
     "start": "npm run clean && npm run build && node ./build/index.js",
     "eslint": "eslint ./src** --ext .ts --ext .js"
   },
@@ -31,7 +31,7 @@
     "@types/http-errors": "^1.6.3",
     "@types/jest": "^25.2.1",
     "@types/jsonwebtoken": "^8.3.9",
-    "@types/mongoose": "^5.7.14",
+    "@types/sequelize": "^4.28.9",
     "@types/uuid": "^7.0.3",
     "@typescript-eslint/eslint-plugin": "^2.30.0",
     "@typescript-eslint/parser": "^2.30.0",
@@ -47,7 +47,8 @@
     "express": "^4.17.1",
     "http-errors": "^1.7.3",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.11",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.1",
     "uuid": "^8.0.0"
   }
 }

@@ -16,6 +16,11 @@
   "plugins": ["@typescript-eslint"],
   "rules": {
     "semi": ["off", "always"],
-    "quotes": ["error", "single"]
+    "quotes": ["error", "single"],
+    "no-invalid-regexp": "error",
+    "no-irregular-whitespace": "error",
+    "no-this-before-super": "error",
+    "no-useless-computed-key": "error",
+    "no-useless-constructor": "error"
   }
 }
